@@ -1,0 +1,41 @@
+{
+  "name": "YYUtility",
+  "version": "0.1.0",
+  "summary": "一个通用的Swift扩展组件",
+  "description": "YYUtility是一个通用的扩展组件，整理了iOS开发中常用的一些方法与扩展。",
+  "homepage": "https://github.com/CaryGo/YYUtility",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "CaryGo": "guojiashuang@live.com"
+  },
+  "source": {
+    "git": "https://github.com/CaryGo/YYUtility.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "pod_target_xcconfig": {
+    "OTHER_LDFLAGS": "-lObjC"
+  },
+  "requires_arc": true,
+  "source_files": "YYUtility/Classes/**/*",
+  "public_header_files": "YYUtility/Classes/**/*.{h}",
+  "swift_versions": [
+    "5.1",
+    "5.2"
+  ],
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "libraries": [
+    "c++",
+    "bz2",
+    "z"
+  ],
+  "swift_version": "5.2"
+}
