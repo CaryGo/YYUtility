@@ -1,5 +1,5 @@
 //
-//  RSA.h
+//  RSACryptor.h
 //  YYUtility
 //
 //  Created by cary on 2023/6/23.
@@ -47,7 +47,7 @@
  http://web.chacuo.net/netrsakeypair
  */
 
-@interface RSA : NSObject
+@interface RSACryptor : NSObject
 
 /**
  *  加密方法

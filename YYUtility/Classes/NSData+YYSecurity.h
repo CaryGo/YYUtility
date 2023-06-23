@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonCryptor.h>
 
 @interface NSData (YYSecurity)
 
@@ -52,18 +53,51 @@
 /// - Parameters:
 ///   - key: 秘钥
 ///   - iv: 向量
-- (NSData *)yy_aes256EncryptWithKey:(NSString *)key iv:(NSString *)iv;
+- (NSData *)yy_aes256EncryptWithKey:(NSString *)key
+                                 iv:(NSString *)iv;
 
 /// AES解密
 /// - Parameters:
 ///   - key: 秘钥
 ///   - iv: 向量
-- (NSData *)yy_aes256DecryptWithkey:(NSString *)key iv:(NSString *)iv;
+- (NSData *)yy_aes256DecryptWithkey:(NSString *)key
+                                 iv:(NSString *)iv;
+
+/// 3DES加密
+/// - Parameters:
+///   - key: 秘钥
+///   - iv: 向量
+- (NSData *)yy_3DESEncryptWithKey:(NSString *)key
+                               iv:(NSString *)iv;
+
+/// 3DES解密
+/// - Parameters:
+///   - key: 秘钥
+///   - iv: 向量
+- (NSData *)yy_3DESDecryptWithkey:(NSString *)key
+                               iv:(NSString *)iv;
 
 /// gzip压缩
 - (NSData *)yy_gzipCompress;
 
 /// gzip解压
 - (NSData *)yy_gzipDecompress;
+
+@end
+
+
+@interface NSData (YYLowLevelCommonCryptor)
+
+- (NSData *)yy_dataEncryptedUsingAlgorithm: (CCAlgorithm) algorithm
+                                       key: (id) key        // data or string
+                      initializationVector: (id) iv        // data or string
+                                   options: (CCOptions) options
+                                     error: (CCCryptorStatus *) error;
+
+- (NSData *)yy_decryptedDataUsingAlgorithm: (CCAlgorithm) algorithm
+                                       key: (id) key        // data or string
+                      initializationVector: (id) iv        // data or string
+                                   options: (CCOptions) options
+                                     error: (CCCryptorStatus *) error;
 
 @end

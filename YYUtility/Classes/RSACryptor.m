@@ -1,18 +1,18 @@
 //
-//  RSA.m
+//  RSACryptor.m
 //  YYUtility
 //
 //  Created by cary on 2023/6/23.
 //
 
-#import "RSA.h"
+#import "RSACryptor.h"
 #if __has_include(<YYUtility/YYUtility-Swift.h>)
 #import <YYUtility/YYUtility-Swift.h>
 #else
-#import "YYUtility-Swift.pch"
+#import "YYUtility-Swift.h"
 #endif
 
-@implementation RSA
+@implementation RSACryptor
 
 static NSData *rsa_base64_decode(NSString *str){
     NSData *data = [[NSData alloc] initWithBase64EncodedString:str options:NSDataBase64DecodingIgnoreUnknownCharacters];

@@ -11,7 +11,7 @@
 #endif
 
 #import "NSData+YYSecurity.h"
-#import "RSA.h"
+#import "RSACryptor.h"
 
 FOUNDATION_EXPORT double YYUtilityVersionNumber;
 FOUNDATION_EXPORT const unsigned char YYUtilityVersionString[];
