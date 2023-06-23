@@ -22,8 +22,7 @@
     "OTHER_LDFLAGS": "-lObjC"
   },
   "requires_arc": true,
-  "source_files": "YYUtility/Classes/**/*",
-  "public_header_files": "YYUtility/Classes/**/*.{h}",
+  "public_header_files": "YYUtility/Classes/Utils/*.{h}",
   "swift_versions": [
     "5.1",
     "5.2"
@@ -36,6 +35,20 @@
     "c++",
     "bz2",
     "z"
+  ],
+  "subspecs": [
+    {
+      "name": "CommonCrypto",
+      "source_files": "YYUtility/Classes/CommonCrypto/*"
+    },
+    {
+      "name": "Extension",
+      "source_files": "YYUtility/Classes/Extension/*"
+    },
+    {
+      "name": "Utils",
+      "source_files": "YYUtility/Classes/Utils/*"
+    }
   ],
   "swift_version": "5.2"
 }

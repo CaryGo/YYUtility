@@ -1,5 +1,5 @@
 //
-//  NSData+YYSecurity.h
+//  NSData+YYCommonCryptor.h
 //  YYUtility
 //
 //  Created by cary on 2023/6/23.
@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCryptor.h>
 
-@interface NSData (YYSecurity)
+@interface NSData (YYCommonCryptor)
 
 /// md2
 - (NSString *)yy_md2String;

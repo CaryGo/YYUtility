@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "NSData+YYSecurity.h"
+#import "NSData+YYCommonCryptor.h"
 #import "RSACryptor.h"
 
 FOUNDATION_EXPORT double YYUtilityVersionNumber;

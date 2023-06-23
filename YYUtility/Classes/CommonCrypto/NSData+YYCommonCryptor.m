@@ -1,16 +1,16 @@
 //
-//  NSData+YYSecurity.m
+//  NSData+YYCommonCryptor.m
 //  YYUtility
 //
 //  Created by cary on 2023/6/23.
 //
 
-#import "NSData+YYSecurity.h"
+#import "NSData+YYCommonCryptor.h"
 @import CommonCrypto;
 @import zlib;
 @import Security;
 
-@implementation NSData (YYSecurity)
+@implementation NSData (YYCommonCryptor)
 
 - (NSString *)yy_md2String {
     unsigned char result[CC_MD2_DIGEST_LENGTH];

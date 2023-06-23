@@ -30,9 +30,21 @@ YYUtility是一个通用的扩展组件，整理了iOS开发中常用的一些�
   s.ios.deployment_target = '9.0'
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.requires_arc = true
-
-  s.source_files = 'YYUtility/Classes/**/*'
-  s.public_header_files = 'YYUtility/Classes/**/*.{h}'
+  
+  s.subspec 'CommonCrypto' do |ss|
+    ss.source_files = 'YYUtility/Classes/CommonCrypto/*'
+    s.public_header_files = 'YYUtility/Classes/CommonCrypto/*.{h}'
+  end
+  
+  s.subspec 'Extension' do |ss|
+    ss.source_files = 'YYUtility/Classes/Extension/*'
+    s.public_header_files = 'YYUtility/Classes/Extension/*.{h}'
+  end
+  
+  s.subspec 'Utils' do |ss|
+    ss.source_files = 'YYUtility/Classes/Utils/*'
+    s.public_header_files = 'YYUtility/Classes/Utils/*.{h}'
+  end
   
   s.swift_version = ['5.1', '5.2']
   
